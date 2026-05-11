@@ -13,20 +13,20 @@
       theme: {
         extend: {
           colors: {
-            ink: "#151724",
-            mist: "#eef0ff",
-            paper: "#fbfaf7",
-            accent: "#4564ff",
-            accentDeep: "#1f2f7c",
-            sand: "#ece6dc",
-            stroke: "#d7d9e4"
+            ink: "#101828",
+            mist: "#eee9ff",
+            paper: "#fcfaf5",
+            accent: "#5b47f5",
+            accentDeep: "#3526a8",
+            sand: "#f3ebdd",
+            stroke: "#d9d2f0"
           },
           fontFamily: {
             sans: ["Public Sans", "sans-serif"],
             display: ["Syne", "sans-serif"]
           },
           boxShadow: {
-            soft: "0 32px 90px -34px rgba(25,34,74,.35)"
+            soft: "0 32px 90px -34px rgba(53,38,168,.22)"
           }
         }
       }
@@ -73,7 +73,7 @@
     <section id="home" class="relative isolate overflow-hidden pt-28 sm:pt-32">
       <div class="hero-wash absolute inset-y-0 left-0 hidden w-[52%] lg:block"></div>
       <div class="absolute left-[52%] top-1/2 hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-paper lg:block"></div>
-      <div class="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(circle_at_top,rgba(69,100,255,0.14),transparent_65%)]"></div>
+      <div class="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(circle_at_top,rgba(91,71,245,0.16),transparent_65%)]"></div>
       <div class="relative mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl items-center justify-center px-6 pb-24 sm:px-8 lg:px-10">
         <div class="reveal max-w-4xl text-center">
           <p class="section-kicker justify-center">HEY! I AM</p>
@@ -126,7 +126,7 @@
             <div class="rounded-2xl border border-stroke bg-white px-5 py-5"><p class="text-3xl font-bold text-accent" data-counter data-target="20">0</p><p class="mt-2 text-sm uppercase tracking-[0.2em] text-slate-500">Happy Clients</p></div>
           </div>
           <div class="mt-10">
-            <a href="#contact" class="inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-accentDeep">
+            <a href="https://www.linkedin.com/in/kanokpol-natekuakul" class="inline-flex items-center gap-3 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-accentDeep">
               Download CV
               <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>
             </a>
@@ -167,19 +167,31 @@
               </div>
             </div>
             <div class="resume-panel hidden reveal" data-tab-panel="skills">
-              <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-                <div class="rounded-[2rem] border border-stroke bg-paper px-6 py-7 shadow-soft">
-                  <div class="space-y-6">
-                    <div><div class="mb-2 flex items-center justify-between text-sm font-semibold uppercase tracking-[0.14em] text-slate-500"><span>HTML / Semantic Structure</span><span>95%</span></div><div class="skill-track"><span style="width: 95%"></span></div></div>
-                    <div><div class="mb-2 flex items-center justify-between text-sm font-semibold uppercase tracking-[0.14em] text-slate-500"><span>Tailwind CSS / Design Systems</span><span>92%</span></div><div class="skill-track"><span style="width: 92%"></span></div></div>
-                    <div><div class="mb-2 flex items-center justify-between text-sm font-semibold uppercase tracking-[0.14em] text-slate-500"><span>JavaScript Interaction</span><span>88%</span></div><div class="skill-track"><span style="width: 88%"></span></div></div>
-                    <div><div class="mb-2 flex items-center justify-between text-sm font-semibold uppercase tracking-[0.14em] text-slate-500"><span>Responsive UI</span><span>93%</span></div><div class="skill-track"><span style="width: 93%"></span></div></div>
-                  </div>
+              <div class="skill-panel">
+                <div class="border-b border-stroke/90 pb-3">
+                  <h3 class="skill-heading">Technical Skills</h3>
                 </div>
-                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-                  <article class="rounded-[2rem] border border-stroke bg-white px-5 py-5"><p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Creative Direction</p><p class="mt-3 text-lg font-semibold">Turns references into fresh, launch-ready interfaces.</p></article>
-                  <article class="rounded-[2rem] border border-stroke bg-white px-5 py-5"><p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Performance Mindset</p><p class="mt-3 text-lg font-semibold">Prefers lean scripts and cleaner front-end choices.</p></article>
-                  <article class="rounded-[2rem] border border-stroke bg-white px-5 py-5"><p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Collaboration</p><p class="mt-3 text-lg font-semibold">Comfortable moving between design polish and code cleanup.</p></article>
+                <div class="mt-4 space-y-3">
+                  <div class="skill-row">
+                    <div class="skill-label">Frontend</div>
+                    <div class="skill-value">React.js, HTML5, CSS3, JavaScript (ES6+), TypeScript, Tailwind CSS, Bootstrap, Vite</div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-label">Backend</div>
+                    <div class="skill-value">Node.js, Express.js, PHP, C#.NET</div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-label">Database</div>
+                    <div class="skill-value">MongoDB, MySQL, PostgreSQL</div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-label">DevOps</div>
+                    <div class="skill-value">Git, GitHub, GitHub Actions, Netlify, Vercel, CI/CD pipelines</div>
+                  </div>
+                  <div class="skill-row">
+                    <div class="skill-label">Design/QA</div>
+                    <div class="skill-value">Figma (UI Mockup), Manual Testing, Test Case Design, Technical Documentation</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,101 +209,34 @@
     </section>
 
     <section id="contact" class="relative mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10 lg:py-28">
-      <div class="absolute inset-x-6 top-12 -z-10 h-56 rounded-[2.5rem] bg-[radial-gradient(circle_at_top_right,rgba(69,100,255,0.12),transparent_52%),linear-gradient(180deg,rgba(238,240,255,0.7),rgba(255,255,255,0))] sm:inset-x-8 lg:inset-x-10"></div>
+      <div class="absolute inset-x-6 top-12 -z-10 h-56 rounded-[2.5rem] bg-[radial-gradient(circle_at_top_right,rgba(91,71,245,0.14),transparent_52%),linear-gradient(180deg,rgba(238,233,255,0.8),rgba(255,255,255,0))] sm:inset-x-8 lg:inset-x-10"></div>
       <div class="reveal mx-auto max-w-2xl text-center">
         <p class="section-kicker justify-center text-accent">CONTACT</p>
-        <h2 class="mt-5 font-display text-4xl font-bold tracking-tight sm:text-5xl">Let's Build Something Clean and Useful</h2>
-        <p class="mt-5 text-base leading-8 text-slate-600 sm:text-lg">
-          If you have a portfolio, landing page, dashboard, or internal tool in mind, send me a quick message. I enjoy turning vague ideas into practical interfaces that feel polished and easy to use.
-        </p>
+        <h2 class="mt-5 font-display text-4xl font-bold tracking-tight sm:text-5xl">CONTACT</h2>
       </div>
-
-      <div class="mt-14 grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-        <div class="space-y-6">
-          <div class="reveal overflow-hidden rounded-[2rem] border border-stroke bg-white shadow-soft">
-            <div class="border-b border-stroke/70 px-6 py-5 sm:px-7">
-              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-accent">Open to Work</p>
-              <h3 class="mt-3 font-display text-3xl font-bold tracking-tight text-ink">Freelance, full-time, and collaborative projects</h3>
-            </div>
-            <div class="space-y-4 px-6 py-6 sm:px-7">
-              <p class="text-base leading-8 text-slate-600">
-                I can help with front-end builds, Tailwind-based UI, static portfolio pages, full-stack features, and general product polishing.
-              </p>
-              <div class="flex flex-wrap gap-3">
-                <span class="rounded-full border border-accent/20 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">Tailwind CSS</span>
-                <span class="rounded-full border border-stroke bg-paper px-4 py-2 text-sm font-semibold text-slate-700">JavaScript</span>
-                <span class="rounded-full border border-stroke bg-paper px-4 py-2 text-sm font-semibold text-slate-700">Node.js</span>
-                <span class="rounded-full border border-stroke bg-paper px-4 py-2 text-sm font-semibold text-slate-700">UI Cleanup</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="grid gap-4 sm:grid-cols-2">
-            <article class="reveal contact-card">
-              <h3 class="contact-title">Email</h3>
-              <p class="contact-copy">Best for project inquiries and detailed briefs.</p>
-              <a href="mailto:kanokpol@example.com" class="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accentDeep">kanokpol@example.com</a>
-            </article>
-            <article class="reveal contact-card">
-              <h3 class="contact-title">Phone</h3>
-              <p class="contact-copy">Useful when you want to move fast and talk directly.</p>
-              <a href="tel:+66800000000" class="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accentDeep">+66 80 000 0000</a>
-            </article>
-            <article class="reveal contact-card">
-              <h3 class="contact-title">Location</h3>
-              <p class="contact-copy">Based in Bangkok and comfortable working remotely.</p>
-              <p class="mt-4 text-sm font-semibold text-slate-700">Bangkok, Thailand</p>
-            </article>
-            <article class="reveal contact-card">
-              <h3 class="contact-title">GitHub</h3>
-              <p class="contact-copy">See code samples, experiments, and active repositories.</p>
-              <a href="https://github.com/Kanokpol-Natekuakul" target="_blank" rel="noreferrer" class="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accentDeep">github.com/Kanokpol-Natekuakul</a>
-            </article>
-          </div>
+      <div class="mx-auto mt-14 flex justify-center">
+        <div class="grid w-full max-w-3xl gap-5 sm:grid-cols-2">
+          <article class="reveal contact-card">
+            <h3 class="contact-title">Email</h3>
+            <p class="contact-copy">Best for project inquiries and detailed briefs.</p>
+            <a href="mailto:kanokpol@example.com" class="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accentDeep">kanokpol@example.com</a>
+          </article>
+          <article class="reveal contact-card">
+            <h3 class="contact-title">Phone</h3>
+            <p class="contact-copy">Useful when you want to move fast and talk directly.</p>
+            <a href="tel:+66800000000" class="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accentDeep">+66 80 000 0000</a>
+          </article>
+          <article class="reveal contact-card">
+            <h3 class="contact-title">Location</h3>
+            <p class="contact-copy">Based in Bangkok and comfortable working remotely.</p>
+            <p class="mt-4 text-sm font-semibold text-slate-700">Bangkok, Thailand</p>
+          </article>
+          <article class="reveal contact-card">
+            <h3 class="contact-title">GitHub</h3>
+            <p class="contact-copy">See code samples, experiments, and active repositories.</p>
+            <a href="https://github.com/Kanokpol-Natekuakul" target="_blank" rel="noreferrer" class="mt-4 inline-flex break-all text-sm font-semibold text-accent hover:text-accentDeep">github.com/Kanokpol-Natekuakul</a>
+          </article>
         </div>
-
-        <form class="reveal rounded-[2rem] border border-stroke bg-white p-6 shadow-soft sm:p-8">
-          <div class="grid gap-5 sm:grid-cols-2">
-            <label class="form-field">
-              <span>Name</span>
-              <input type="text" name="name" placeholder="Your name">
-            </label>
-            <label class="form-field">
-              <span>Email</span>
-              <input type="email" name="email" placeholder="you@example.com">
-            </label>
-          </div>
-
-          <div class="mt-5 grid gap-5 sm:grid-cols-2">
-            <label class="form-field">
-              <span>Project Type</span>
-              <input type="text" name="projectType" placeholder="Portfolio, landing page, app">
-            </label>
-            <label class="form-field">
-              <span>Timeline</span>
-              <input type="text" name="timeline" placeholder="2 weeks, 1 month">
-            </label>
-          </div>
-
-          <label class="form-field mt-5">
-            <span>Subject</span>
-            <input type="text" name="subject" placeholder="What do you want to build?">
-          </label>
-
-          <label class="form-field mt-5">
-            <span>Message</span>
-            <textarea name="message" rows="7" placeholder="Share your goal, current problem, references, or anything that would help me understand the project."></textarea>
-          </label>
-
-          <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p class="text-sm leading-7 text-slate-500">
-              I usually reply with a first response, scope notes, or next-step questions after reviewing the brief.
-            </p>
-            <button type="submit" class="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-accentDeep">
-              Send Message
-            </button>
-          </div>
-        </form>
       </div>
     </section>
 
