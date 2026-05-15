@@ -7,33 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink: "#101828",
-            mist: "#eee9ff",
-            paper: "#fcfaf5",
-            accent: "#5b47f5",
-            accentDeep: "#3526a8",
-            sand: "#f3ebdd",
-            stroke: "#d9d2f0"
-          },
-          fontFamily: {
-            sans: ["Public Sans", "sans-serif"],
-            display: ["Syne", "sans-serif"]
-          },
-          boxShadow: {
-            soft: "0 32px 90px -34px rgba(53,38,168,.22)"
-          }
-        }
-      }
-    };
-  </script>
-  <link rel="stylesheet" href="styles.css?v=20260511-1">
-  <script src="script.js?v=20260511-1" defer></script>
+
+  <link rel="stylesheet" href="styles.css?v=20260511-2">
+  <script src="script.js?v=20260511-3" defer></script>
 </head>
 <body class="bg-paper font-sans text-ink antialiased">
   <header class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-300" data-header>
@@ -73,14 +49,14 @@
     <section id="home" class="relative isolate overflow-hidden pt-28 sm:pt-32">
       <div class="hero-wash absolute inset-y-0 left-0 hidden w-[52%] lg:block"></div>
       <div class="absolute left-[52%] top-1/2 hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-paper lg:block"></div>
-      <div class="absolute inset-x-0 top-0 h-48 bg-[radial-gradient(circle_at_top,rgba(91,71,245,0.16),transparent_65%)]"></div>
+      <div class="absolute inset-x-0 top-0 h-48 hero-top-glow"></div>
       <div class="relative mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl items-center justify-center px-6 pb-24 sm:px-8 lg:px-10">
         <div class="reveal max-w-4xl text-center">
           <p class="section-kicker justify-center">HEY! I AM</p>
           <h1 class="mt-6 font-display text-5xl font-extrabold leading-none tracking-tight text-ink sm:text-6xl lg:text-7xl">Kanokpol Natekuakul</h1>
           <p class="mt-6 text-2xl font-semibold text-ink sm:text-3xl">
             I'm a
-            <span class="typewriter ml-2 inline-block min-w-[11ch] border-b-4 border-accent pb-1 text-accent" data-typewriter='["Back-end Developer","Full-Stack Developer","AI Prompt Engineer"]'></span>
+            <span class="typewriter ml-2 inline-block min-w-[11ch] border-b-4 border-accent pb-1 text-accent" data-typewriter='["QA Tester","IT Support","AI Prompt Engineer","Back-end Developer"]'></span>
           </p>
           <!-- <p class="mx-auto mt-8 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
             A Ronaldo-inspired portfolio landing page with a clean split-screen hero, crisp hierarchy, and smooth front-end interactions.
@@ -105,7 +81,7 @@
     <section id="about" class="relative mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10 lg:py-28">
       <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div class="reveal relative overflow-hidden rounded-[2rem] bg-mist shadow-soft">
-          <div class="absolute inset-0 bg-[linear-gradient(145deg,rgba(255,255,255,0.45),transparent_55%)]"></div>
+          <div class="absolute inset-0 about-img-overlay"></div>
           <img src="pic.jpg" alt="About portrait" class="h-full min-h-[28rem] w-full object-cover" loading="lazy">
         </div>
         <div class="reveal">
@@ -160,7 +136,7 @@
             </div>
             <div class="resume-panel hidden reveal" data-tab-panel="experience">
               <div class="grid gap-6 md:grid-cols-2">
-                <article class="resume-card"><p class="resume-year">Nov 2025 - Present</p><h3 class="resume-title">IT Support Specialist / QA Tester / Full-stack Developer</h3><p class="resume-org">Hybrid</p><p class="resume-copy">Providing technical support, conducting quality assurance tests, and developing full-stack applications.</p></article>
+                <article class="resume-card"><p class="resume-year">Nov 2025 - Present</p><h3 class="resume-title">IT Support / QA Tester </h3><p class="resume-org">Hybrid</p><p class="resume-copy">Providing technical support, conducting quality assurance tests, and developing full-stack applications.</p></article>
                 <article class="resume-card"><p class="resume-year">Mar 2025 - Oct 2025</p><h3 class="resume-title">Data Prepare</h3><p class="resume-org">Internship</p><p class="resume-copy">Check the parameters and add the campaign to the EDC (Electronic Data Capture) system</p></article>
                 <!-- <article class="resume-card"><p class="resume-year">2022 - 2023</p><h3 class="resume-title">Web Designer</h3><p class="resume-org">Orbit Creative</p><p class="resume-copy">Handled static sites, brand refreshes, and responsive design cleanup for clients.</p></article>
                 <article class="resume-card"><p class="resume-year">2021 - 2022</p><h3 class="resume-title">Junior Developer</h3><p class="resume-org">Independent projects</p><p class="resume-copy">Started with handcrafted HTML/CSS builds before moving into richer interface work.</p></article> -->
@@ -209,7 +185,7 @@
     </section>
 
     <section id="contact" class="relative mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-10 lg:py-28">
-      <div class="absolute inset-x-6 top-12 -z-10 h-56 rounded-[2.5rem] bg-[radial-gradient(circle_at_top_right,rgba(91,71,245,0.14),transparent_52%),linear-gradient(180deg,rgba(238,233,255,0.8),rgba(255,255,255,0))] sm:inset-x-8 lg:inset-x-10"></div>
+      <div class="absolute inset-x-6 top-12 -z-10 h-56 rounded-[2.5rem] contact-bg-glow sm:inset-x-8 lg:inset-x-10"></div>
       <div class="reveal mx-auto max-w-2xl text-center">
         <p class="section-kicker justify-center text-accent">CONTACT</p>
         <h2 class="mt-5 font-display text-4xl font-bold tracking-tight sm:text-5xl">CONTACT</h2>

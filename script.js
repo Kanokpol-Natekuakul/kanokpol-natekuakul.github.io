@@ -3,6 +3,7 @@ const menuToggle = document.querySelector("[data-menu-toggle]");
 const mobilePanel = document.querySelector("[data-mobile-panel]");
 const mobileLinks = document.querySelectorAll("[data-mobile-link]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
+const hashLinks = document.querySelectorAll('a[href^="#"]');
 const tabButtons = document.querySelectorAll("[data-tab-target]");
 const tabPanels = document.querySelectorAll("[data-tab-panel]");
 const revealItems = document.querySelectorAll(".reveal");
@@ -15,6 +16,22 @@ const contactForm = document.querySelector("form");
 if (yearSlot) {
   yearSlot.textContent = new Date().getFullYear();
 }
+
+const getHeaderOffset = () => {
+  if (!header) return 96;
+  return Math.ceil(header.getBoundingClientRect().height) + 20;
+};
+
+const scrollToHashTarget = (hash, smooth = true) => {
+  if (!hash || hash === "#") return;
+  const target = document.querySelector(hash);
+  if (!target) return;
+  const top = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
+  window.scrollTo({
+    top: Math.max(top, 0),
+    behavior: smooth ? "smooth" : "auto"
+  });
+};
 
 const syncHeader = () => {
   if (!header) return;
@@ -38,6 +55,18 @@ if (menuToggle && mobilePanel) {
     });
   });
 }
+
+hashLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+    if (!href || !href.startsWith("#")) return;
+    const target = document.querySelector(href);
+    if (!target) return;
+    event.preventDefault();
+    history.pushState(null, "", href);
+    scrollToHashTarget(href, true);
+  });
+});
 
 tabButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -141,6 +170,18 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
+
+window.addEventListener("load", () => {
+  if (!window.location.hash) return;
+  setTimeout(() => {
+    scrollToHashTarget(window.location.hash, false);
+  }, 80);
+});
+
+window.addEventListener("hashchange", () => {
+  if (!window.location.hash) return;
+  scrollToHashTarget(window.location.hash, false);
+});
 
 if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
